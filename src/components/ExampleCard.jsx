@@ -13,26 +13,20 @@ import {
   Image,
   Button,
   Collapse,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverBody,
-  PopoverHeader,
-  AspectRatio,
+  Spacer,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
 import { BiLike, BiChat, BiShare } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import ExampleModal from "./ExampleModal";
 
 export default function ExampleCard() {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" position="relative" zIndex="base">
       <CardHeader>
         <Flex spacing="2">
           <Flex flex="1" gap="2" alignItems="center" flexWrap="wrap">
@@ -68,29 +62,13 @@ export default function ExampleCard() {
             eveniet aperiam.
           </Text>
         </Collapse>
-        <Button size="sm" onClick={handleToggle} mt="1rem">
-          Show {show ? "Less" : "More"}
-        </Button>
-        <Popover>
-          <PopoverTrigger>
-            <Button size="sm" mt="1rem" ml={2}>
-              Trigger
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent w="2xl">
-            <PopoverArrow />
-            <PopoverCloseButton />
-            <PopoverHeader>Code!</PopoverHeader>
-            <PopoverBody>
-              <Image
-                objectFit="cover"
-                src="/assets/collapse_sc.png"
-                alt="Code Snippet"
-                // w="480px"
-              />
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+        <Flex>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+            Show {show ? "Less" : "More"}
+          </Button>
+          <Spacer></Spacer>
+          <ExampleModal></ExampleModal>
+        </Flex>
       </CardBody>
       <Image
         objectFit="cover"

@@ -24,6 +24,7 @@ export default function ColorModeToggle() {
         gap={4}
         h={20}
         w={60}
+        zIndex={"tooltip"}
       >
         {/* Color Mode Toggle */}
         <HStack>
