@@ -11,6 +11,8 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
+import ImagesOne from "@/components/ImagesOne";
+import ImagesTwo from "@/components/ImagesTwo";
 
 export default function Home() {
   return (
@@ -21,9 +23,10 @@ export default function Home() {
       <Toast />
       <Tabs>
         <TabList>
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-          <Tab>Three</Tab>
+          <Tab>Card</Tab>
+          <Tab>Images@4:3</Tab>
+          <Tab>Images@16:9</Tab>
+          <Tab>?</Tab>
         </TabList>
 
         <TabPanels>
@@ -31,11 +34,12 @@ export default function Home() {
             <ExampleCard></ExampleCard>
           </TabPanel>
           <TabPanel>
-            <h1>This is the 2nd Tab</h1>
+            <ImagesOne></ImagesOne>
           </TabPanel>
           <TabPanel>
-            <h1>This is the 3rd Tab!</h1>
+            <ImagesTwo></ImagesTwo>
           </TabPanel>
+          <TabPanel></TabPanel>
         </TabPanels>
       </Tabs>
     </Flex>
