@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import ExampleToggle from "@/components/ExampleToggle";
 import ExampleCard from "@/components/ExampleCard";
+import Toast from "@/components/ExampleToast";
 import {
   Box,
   Flex,
@@ -17,7 +18,7 @@ export default function Home() {
       <Box pos="fixed" top="1%" right="1%">
         <ExampleToggle></ExampleToggle>
       </Box>
-
+      <Toast />
       <Tabs>
         <TabList>
           <Tab>One</Tab>
