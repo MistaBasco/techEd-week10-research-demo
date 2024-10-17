@@ -7,14 +7,13 @@ import {
   useColorMode,
   useDisclosure,
   HStack,
+  Portal,
 } from "@chakra-ui/react";
 import ExampleSlide from "./ExampleSlide";
-import { Grey_Qo } from "next/font/google";
 
 export default function ColorModeToggle() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure(); // Control the image slide transition
-
   return (
     <>
       <FormControl

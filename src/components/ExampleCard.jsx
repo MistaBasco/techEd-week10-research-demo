@@ -29,7 +29,7 @@ export default function ExampleCard() {
     <Card maxW="sm" position="relative" zIndex="base">
       <CardHeader>
         <Flex spacing="2">
-          <Flex flex="1" gap="2" alignItems="center" flexWrap="wrap">
+          <Flex flex="1" gap="1" alignItems="center" flexWrap="wrap">
             <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
 
             <Box>

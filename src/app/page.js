@@ -1,7 +1,15 @@
 import styles from "./page.module.css";
 import ExampleToggle from "@/components/ExampleToggle";
 import ExampleCard from "@/components/ExampleCard";
-import { Box, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+} from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -9,7 +17,26 @@ export default function Home() {
       <Box pos="fixed" top="1%" right="1%">
         <ExampleToggle></ExampleToggle>
       </Box>
-      <ExampleCard></ExampleCard>
+
+      <Tabs>
+        <TabList>
+          <Tab>One</Tab>
+          <Tab>Two</Tab>
+          <Tab>Three</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <ExampleCard></ExampleCard>
+          </TabPanel>
+          <TabPanel>
+            <h1>This is the 2nd Tab</h1>
+          </TabPanel>
+          <TabPanel>
+            <h1>This is the 3rd Tab!</h1>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
     </Flex>
   );
 }
