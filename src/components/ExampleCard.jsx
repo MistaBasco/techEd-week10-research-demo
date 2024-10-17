@@ -46,7 +46,7 @@ export default function ExampleCard() {
         </Flex>
       </CardHeader>
       <CardBody>
-        <Collapse startingHeight={100} in={show}>
+        <Collapse startingHeight={75} in={show}>
           <Text>
             With Chakra UI, I wanted to sync the speed of development with the
             speed of design. I wanted the developer to be just as excited as the
